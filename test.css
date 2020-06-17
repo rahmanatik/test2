@@ -1,0 +1,73 @@
+.panel_set {
+	margin-bottom:20px;
+}
+
+.panel {
+	/* 
+	  Issues: Collapsible pane space issue 
+	  Fix: Added  overflow:auto;
+	  Fixed by: Bhanu Prakash -z075573
+	 */ 
+	overflow:auto;
+	margin-bottom:5px;
+	border:1px solid #666666;
+	border-bottom:none;
+}
+
+.panel.active {
+	border-bottom:1px solid #666666;
+}
+
+.panel .title_bar {
+	height:25px;
+	background-image:url(../images/bar1.png);
+	background-repeat:repeat-x;
+	background-position:0px -25px;
+	border-bottom:1px solid #666666;
+}
+
+.panel.active .title_bar {
+	background-position:0px 0px;
+}
+
+.panel .title_bar > h2 {
+	cursor:pointer;
+	color:#999999;
+	float:left;
+	height:25px;
+	font-size:11px;
+	line-height:25px;
+	margin-left:10px;
+	padding-left:20px;
+	background-image:url(../images/collapse-arrows.png);
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+}
+
+.panel.active .title_bar > h2 {
+	color:#666666;
+	background-position:0px -25px;
+}
+
+.panel .title_bar > h2:hover {
+	color:#666666;
+}
+
+.panel.active .title_bar > h2:hover {
+	color:#000000;
+}
+
+.panel .title_bar > .panel_actions {
+	float:right;
+	margin-right:10px;
+	padding-top:5px;
+}
+
+.panel .title_bar  .panel_actions li {
+	float:right;
+	margin-left:5px;
+}
+
+.panel .panel_content {
+	padding:10px;
+}
